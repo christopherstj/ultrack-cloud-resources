@@ -1,0 +1,8 @@
+config:
+  gcp:credentials: config/animated-cell-381917-b2cf519801b9.json
+  gcp:project: animated-cell-381917
+  ultrack:db-root-password:
+    secure: AAABAKnbw0NVXBzBQhRdc7aXpkgkP9KcSi2nkXF4QlM6RD93knzDdEXv1vTBqboO
+  ultrack:root-service-account: service-217147926832@gs-project-accounts.iam.gserviceaccount.com
+  ultrack:web-app-bi-password:
+    secure: AAABABO1kPoIg3HRbdc99JM9JBYw9ANSt1wv8h3ftv6duYPR23PyDmUw+ZKEJnP0

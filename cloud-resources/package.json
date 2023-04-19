@@ -1,0 +1,19 @@
+{
+    "name": "ultrack",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^16"
+    },
+    "dependencies": {
+        "@pulumi/gcp": "^6.52.0",
+        "@pulumi/pulumi": "^3.0.0"
+    },
+    "version": "1.0.0",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}

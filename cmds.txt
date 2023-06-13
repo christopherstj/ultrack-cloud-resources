@@ -1,0 +1,17 @@
+## Granting access to cloud sql for k8s
+
+gcloud container clusters get-credentials web-cluster --region us-central1
+
+gcloud iam service-accounts add-iam-policy-binding \
+--role="roles/iam.workloadIdentityUser" \
+--member="serviceAccount:animated-cell-381917.svc.id.goog[web-cluster/dev-service-account]" \
+web-app@animated-cell-381917.iam.gserviceaccount.com
+
+kubectl annotate serviceaccount \
+dev-service-account \
+iam.gke.io/gcp-service-account=web-app@animated-cell-381917.iam.gserviceaccount.com
+
+kubectl apply -f "https://raw.githubusercontent.com/GoogleCloudPlatform/marketplace-k8s-app-tools/master/crd/app-crd.yaml"
+
+kubectl expose deployment server-deployment --type LoadBalancer --port 80 --target-port 8080
+kubectl expose deployment rabbit-deployment-dev --type LoadBalancer --port 80 --target-port 8080
